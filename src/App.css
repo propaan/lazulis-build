@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+}
+.app-sidebar {
+  margin: 0;
+  width: 10vw;
+  background-color: #efefef;
+  height: 100vh;
+}
+@font-face {
+  font-family: "Mono";
+  src: url("../public/mono.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+textarea, h1, h2 {
+  font-family: "Mono";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-sidebar-notes {
+  margin-top: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-sidebar-note {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: 0.3s;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.app-sidebar-note:hover {
+  background-color: rgba(197, 239, 255, 0.812)
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-sidebar-note img {
+  height: 32px;
+  margin-right: 10px;
+}
+
+.app-sidebar-note p {
+  font-size: 18px;
+  font-family: "Mono";
+}
+
+.App {
+  display: flex;
+}
+
+
+.app-body {
+  float: right;
+}
+
+.app-body {
+  margin-left: 100px;
+  margin-top: 60px;
+}
+
+.app-body-title input{
+  height: 62px;
+  width: 80vw;
+  font-size: 32px;
+  text-decoration: none;
+  border: 1px white solid;
+  border-radius: 10px;
+}
+
+.app-body-markdown textarea{
+  width: 80vw;
+  margin-top: 20px;
+  height: auto;
+  resize: none;
+  height: 80vh;
+  border: none;
+  font-size: 16px;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+::selection {
+  background: #DFF6FF;;
 }
