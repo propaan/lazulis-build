@@ -17,15 +17,6 @@ class App extends React.Component {
     console.log("YESSSSSS");
   }
 
-  updatedNote = (updateNote) => {
-    let concernedNote = this.state.notes.find((note) => note.id === updateNote.id);
-
-    if (concernedNote) {
-      console.log(concernedNote.id);
-    }
-
-  }
-
   onAddNote = (specificId) => {
     const randomUUID = uuid();
     const newNote = {
@@ -64,7 +55,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Sidebar notes={this.state.notes} onAddNote={this.onAddNote} activeNoteId={this.state.activeNoteId} setActiveNote={this.setActiveNote} />
-        <Main activeNote={this.getActiveNote()} setActiveNote={this.setActiveNote}/>
+        <Main activeNote={this.getActiveNote()} />
       </div>
     );
   }
