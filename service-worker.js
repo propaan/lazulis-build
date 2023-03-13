@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/lazulis-build/precache-manifest.e03f68a1916b9e769b5021dd6a1f14db.js"
+  "/lazulis-build/precache-manifest.6385d194455afac4653281e5dac9ea89.js"
 );
 
 workbox.clientsClaim();
